@@ -1,0 +1,64 @@
+# ============================
+#      React + Vite Client
+# ============================
+
+# Dependency directory
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+out/
+
+# Vite cache
+.vite/
+vite.config.timestamp*
+
+# Local cache
+.cache/
+.temp/
+tmp/
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing files
+coverage/
+test-output/
+cypress/videos/
+cypress/screenshots/
+
+# Storybook
+storybook-static/
+
+# Yarn / npm / pnpm
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Mac system
+.AppleDouble
+.LSOverride
+.Trashes
+._*

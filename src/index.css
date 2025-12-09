@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* GLOBAL BUTTON STYLES */
+
+.btn-primary {
+  @apply bg-purple-700 text-white rounded-lg px-5 py-2 font-semibold 
+         transition-all duration-200;
+}
+
+.btn-primary:hover {
+  @apply bg-yellow-500 text-black;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-black rounded-lg px-5 py-2 font-medium
+         transition-all duration-200;
+}
+
+.btn-secondary:hover {
+  @apply bg-yellow-400 text-black;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white rounded-lg px-5 py-2;
+}
+
+.btn-danger:hover {
+  @apply bg-yellow-500 text-black;
+}
+
+.btn-outline {
+  @apply border border-gray-400 text-gray-800 rounded-lg px-5 py-2;
+}
+
+.btn-outline:hover {
+  @apply bg-yellow-400 border-yellow-500 text-black;
+}
