@@ -156,5 +156,5 @@ const SocialIcon = ({ href, label, children }) => (
     {children}
   </a>
 );
-////hhdhbhdbhdbhdbchdc
+
 export default Footer;
