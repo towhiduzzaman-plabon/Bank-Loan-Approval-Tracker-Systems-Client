@@ -1,3 +1,4 @@
+// src/pages/Home/Home.jsx
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
@@ -7,8 +8,7 @@ import HowItWorks from "./HowItWorks";
 import FeedbackCarousel from "./FeedbackCarousel";
 import ExtraSection1 from "./ExtraSection1";
 import ExtraSection2 from "./ExtraSection2";
-
-
+import AnalyticsTeaser from "./AnalyticsTeaser"; // 👈 নতুন গ্রাফ সেকশন
 
 const Home = () => {
   const axiosPublic = useAxiosPublic();
@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+
       {/* Available loans section */}
       <section className="max-w-6xl mx-auto my-10 px-4">
         <div className="flex justify-between items-center mb-4">
@@ -49,15 +50,20 @@ const Home = () => {
                   {loan.description?.slice(0, 80)}...
                 </p>
                 <p className="text-sm">
-                  Interest: <span className="font-semibold">
+                  Interest:{" "}
+                  <span className="font-semibold">
                     {loan.interestRate}%
                   </span>
                 </p>
                 <p className="text-sm">
-                  Max: <span className="font-semibold">${loan.maxLimit}</span>
+                  Max:{" "}
+                  <span className="font-semibold">${loan.maxLimit}</span>
                 </p>
                 <div className="card-actions justify-end mt-3">
-                  <Link to={`/loans/${loan._id}`} className="btn btn-primary btn-sm">
+                  <Link
+                    to={`/loans/${loan._id}`}
+                    className="btn btn-primary btn-sm"
+                  >
                     View Details
                   </Link>
                 </div>
@@ -66,9 +72,14 @@ const Home = () => {
           ))}
         </div>
       </section>
+
       <HowItWorks />
       <FeedbackCarousel />
       <ExtraSection1 />
+
+      {/* 🔥 এখানে গ্রাফ + CTA সেকশন */}
+      <AnalyticsTeaser />
+
       <ExtraSection2 />
     </div>
   );
