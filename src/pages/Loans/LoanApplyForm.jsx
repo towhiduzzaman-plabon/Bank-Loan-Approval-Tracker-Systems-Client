@@ -16,7 +16,7 @@ const LoanApplyForm = () => {
   const [loan, setLoan] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // loan info লোড
+  // loan info
   useEffect(() => {
     const fetchLoan = async () => {
       try {
@@ -53,7 +53,7 @@ const LoanApplyForm = () => {
     try {
       await axiosSecure.post("/api/applications", payload);
       Swal.fire("Success", "Application submitted successfully!", "success");
-      navigate("/dashboard/my-loans"); // submit হলে এখানে যাবে
+      navigate("/dashboard/my-loans");
     } catch (err) {
       console.error(err);
       Swal.fire("Error", "Failed to submit application", "error");
