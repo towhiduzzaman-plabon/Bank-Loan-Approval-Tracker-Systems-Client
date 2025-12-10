@@ -1,4 +1,3 @@
-// src/pages/Home/ExtraSection1.jsx
 import React, { useState } from "react";
 
 const tabs = ["Management", "Board of Directors", "Advisory Board"];
