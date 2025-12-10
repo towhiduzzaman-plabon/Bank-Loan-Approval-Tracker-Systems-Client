@@ -1,4 +1,3 @@
-// src/pages/Home/ExtraSection2.jsx
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -33,7 +32,7 @@ const galleryItems = [
 const ExtraSection2 = () => {
   const [active, setActive] = useState(0);
 
-  // auto-play: প্রতি ৫ সেকেন্ডে পরের ইমেজে যাবে
+  // auto-play gallery
   useEffect(() => {
     const id = setInterval(
       () => setActive((prev) => (prev + 1) % galleryItems.length),
@@ -177,7 +176,7 @@ const ExtraSection2 = () => {
               </div>
             </div>
 
-            {/* progress dots নিচে */}
+            {/* progress dots */}
             <div className="flex items-center justify-center gap-1.5 py-3 bg-slate-900">
               {galleryItems.map((_, idx) => (
                 <span

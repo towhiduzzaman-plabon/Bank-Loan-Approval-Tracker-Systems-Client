@@ -1,4 +1,3 @@
-// src/pages/Auth/Login.jsx
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -162,7 +161,7 @@ const Login = () => {
         <div className="px-6 py-8 md:px-10 md:py-10 flex items-center">
           <div className="w-full">
             <h1 className="text-2xl md:text-3xl font-bold mb-1">
-              Welcome back 👋
+              Welcome back to LoanLink
             </h1>
             <p className="text-sm text-gray-500 mb-6">
               Log in to access your LoanLink dashboard and manage your loans.
@@ -224,7 +223,7 @@ const Login = () => {
               <div className="h-px flex-1 bg-gray-200" />
             </div>
 
-            {/* ORIGINAL STYLE GOOGLE BUTTON (লোকাল SVG সহ) */}
+            {/* ORIGINAL STYLE GOOGLE BUTTON (SVG) */}
             <button
               onClick={handleGoogle}
               disabled={loading}

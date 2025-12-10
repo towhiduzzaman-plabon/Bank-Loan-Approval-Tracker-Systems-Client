@@ -1,4 +1,3 @@
-// src/pages/Auth/Register.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -13,7 +12,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // 🔒 আগের মতই register function রাখা হয়েছে
+// Register form submission handler
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -25,13 +24,13 @@ const Register = () => {
     const photo = form.photo.value;
 
     try {
-      // 1. Firebase create user
+      // Firebase create user
       const result = await createUser(email, password);
 
-      // 2. Update Firebase Profile
+      // Update Firebase Profile
       await updateUserProfile(name, photo);
 
-      // 3. Create / login user in backend
+      // Create / login user in backend
       await axiosPublic.post("/api/auth/jwt", {
         email,
         name,
@@ -47,7 +46,7 @@ const Register = () => {
     }
   };
 
-  // Google register logic আগের মতই, শুধু UI সুন্দর
+  // Google register handler
   const handleGoogleRegister = async () => {
     try {
       const result = await googleSignIn();
@@ -67,7 +66,7 @@ const Register = () => {
   return (
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-base-200/70 px-4 py-10">
       <div className="w-full max-w-5xl bg-base-100 shadow-2xl rounded-3xl overflow-hidden grid md:grid-cols-2">
-        {/* LEFT: Illustration / financial theme (Login-এর সাথে মিল রাখলাম, কিন্তু একটু ভিন্ন টেক্সট) */}
+        {/* LEFT: Illustration / financial theme */}
         <div className="hidden md:block relative bg-gradient-to-br from-purple-700 via-indigo-600 to-sky-500 text-white">
           <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
           <div className="absolute -bottom-16 right-0 w-40 h-40 rounded-full bg-yellow-400/30 blur-2xl" />
@@ -88,7 +87,7 @@ const Register = () => {
               </p>
             </div>
 
-            {/* ছোট illustrative cards */}
+            {/* illustrative cards */}
             <div className="mt-8 space-y-3">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -231,7 +230,7 @@ const Register = () => {
               onClick={handleGoogleRegister}
               className="w-full rounded-xl py-2.5 px-3 text-sm font-medium flex items-center justify-center gap-3 border border-gray-300 bg-white hover:bg-gray-50 hover:shadow-md transition"
             >
-              {/* Google "G" SVG লোকাল */}
+              {/* Google "G" */}
               <span className="w-5 h-5">
                 <svg
                   viewBox="0 0 48 48"
