@@ -1,4 +1,3 @@
-// src/pages/Home/AnalyticsTeaser.jsx
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -23,7 +22,7 @@ const data = [
 const AnalyticsTeaser = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // auto-play করে active month ঘোরানো
+
   useEffect(() => {
     const id = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % data.length);
@@ -132,7 +131,7 @@ const AnalyticsTeaser = () => {
             </ResponsiveContainer>
           </div>
 
-          {/* নিচে ছোট স্ট্যাট কার্ড – active month অনুযায়ী */}
+          {/*   active month */}
           <div className="mt-5 grid grid-cols-2 gap-3 text-xs md:text-sm">
             <div className="rounded-2xl bg-orange-50 px-4 py-3 border border-orange-100">
               <p className="text-[11px] uppercase tracking-wide text-orange-500 mb-1">
@@ -155,7 +154,7 @@ const AnalyticsTeaser = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT : শুধু টেক্সট ও মিনি-স্ট্যাটস */}
+        {/* RIGHT */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
