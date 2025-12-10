@@ -1,4 +1,3 @@
-// src/pages/Dashboard/admin/ManageUsers.jsx
 import React, { useState, useEffect } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
@@ -40,8 +39,8 @@ const ManageUsers = () => {
 
   useEffect(() => {
     fetchUsers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]); // form submit e page reset kore abar fetch korbo
+    
+  }, [page]);
 
   const handleFilterSubmit = (e) => {
     e.preventDefault();
