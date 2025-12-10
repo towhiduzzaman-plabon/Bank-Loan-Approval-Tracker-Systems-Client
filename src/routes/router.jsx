@@ -22,12 +22,8 @@ import Register from "../pages/Auth/Register";
 
 // dashboard common
 import Overview from "../pages/Dashboard/Overview";
-
-// borrower
 import MyLoans from "../pages/Dashboard/borrower/MyLoans";
 import BorrowerProfile from "../pages/Dashboard/borrower/BorrowerProfile";
-
-// admin
 import ManageUsers from "../pages/Dashboard/admin/ManageUsers";
 import AdminAllLoans from "../pages/Dashboard/admin/AdminAllLoans";
 import LoanApplications from "../pages/Dashboard/admin/LoanApplications";
