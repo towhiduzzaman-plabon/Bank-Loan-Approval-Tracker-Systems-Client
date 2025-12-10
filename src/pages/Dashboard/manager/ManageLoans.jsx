@@ -1,4 +1,3 @@
-// client/src/pages/Dashboard/manager/ManageLoans.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";

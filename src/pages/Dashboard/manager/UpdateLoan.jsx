@@ -1,4 +1,3 @@
-// src/pages/Dashboard/manager/UpdateLoan.jsx
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
@@ -25,7 +24,7 @@ const UpdateLoan = () => {
     showOnHome: false,
   });
 
-  // লোন ডাটা লোড
+  // Load existing loan data
   useEffect(() => {
     const fetchLoan = async () => {
       try {

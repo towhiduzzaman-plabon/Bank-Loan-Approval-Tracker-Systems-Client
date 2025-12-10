@@ -1,5 +1,3 @@
-// src/components/Modal.jsx
-// use: <Modal open={open} onClose={...} title="Title">children</Modal>
 import React, { useState, useEffect } from "react";
 
 

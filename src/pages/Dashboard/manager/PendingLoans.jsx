@@ -1,4 +1,3 @@
-// client/src/pages/Dashboard/manager/PendingLoans.jsx
 import React, { useEffect, useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import LoadingSpinner from "../../../components/LoadingSpinner";

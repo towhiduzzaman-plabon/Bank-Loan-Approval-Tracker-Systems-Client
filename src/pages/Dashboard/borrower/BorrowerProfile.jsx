@@ -1,4 +1,3 @@
-// src/pages/Dashboard/borrower/BorrowerProfile.jsx
 import React, { useState, useEffect } from "react";
 import useAuth from "../../../hooks/useAuth";
 

@@ -1,4 +1,3 @@
-// src/pages/Dashboard/admin/AdminAllLoans.jsx
 import React, { useState, useEffect } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
@@ -12,7 +11,7 @@ const AdminAllLoans = () => {
     try {
       setLoading(true);
       const { data } = await axiosSecure.get("/api/loans");
-      setLoans(data.loans || data); // jodi pagination na thake
+      setLoans(data.loans || data);
     } catch (err) {
       console.error(err);
       Swal.fire("Error", "Failed to load loans", "error");
