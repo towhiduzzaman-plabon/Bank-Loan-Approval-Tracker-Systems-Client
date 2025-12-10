@@ -12,7 +12,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-// Register form submission handler
+  // Register form submission handler
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -22,6 +22,7 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photo = form.photo.value;
+    const role = form.role.value || "borrower";
 
     try {
       // Firebase create user
@@ -30,11 +31,12 @@ const Register = () => {
       // Update Firebase Profile
       await updateUserProfile(name, photo);
 
-      // Create / login user in backend
+      // Create / login user in backend + role send
       await axiosPublic.post("/api/auth/jwt", {
         email,
         name,
         photoURL: photo,
+        role,
       });
 
       Swal.fire("Success", "Account created successfully!", "success");
@@ -51,10 +53,12 @@ const Register = () => {
     try {
       const result = await googleSignIn();
 
+      // Google diye register hole by default borrower
       await axiosPublic.post("/api/auth/jwt", {
         email: result.user.email,
         name: result.user.displayName,
         photoURL: result.user.photoURL,
+        role: "borrower",
       });
 
       navigate("/");
@@ -178,6 +182,23 @@ const Register = () => {
                 />
               </div>
 
+            
+              <div>
+                <label className="text-xs font-semibold mb-1 block">
+                  Role
+                </label>
+                <select
+                  name="role"
+                  className="w-full border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 bg-base-100"
+                  defaultValue="borrower"
+                  required
+                >
+                  <option value="borrower">Borrower</option>
+                  <option value="manager">Manager</option>
+                
+                </select>
+              </div>
+
               {/* Password */}
               <div>
                 <label className="text-xs font-semibold mb-1 block">
@@ -224,13 +245,12 @@ const Register = () => {
               <div className="h-px flex-1 bg-gray-200" />
             </div>
 
-            {/* Google Register Button – same style as Login */}
+            {/* Google Register Button */}
             <button
               type="button"
               onClick={handleGoogleRegister}
               className="w-full rounded-xl py-2.5 px-3 text-sm font-medium flex items-center justify-center gap-3 border border-gray-300 bg-white hover:bg-gray-50 hover:shadow-md transition"
             >
-              {/* Google "G" */}
               <span className="w-5 h-5">
                 <svg
                   viewBox="0 0 48 48"
