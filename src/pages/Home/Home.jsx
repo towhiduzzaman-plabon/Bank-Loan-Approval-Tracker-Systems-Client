@@ -1,4 +1,3 @@
-// src/pages/Home/Home.jsx
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
@@ -8,7 +7,7 @@ import HowItWorks from "./HowItWorks";
 import FeedbackCarousel from "./FeedbackCarousel";
 import ExtraSection1 from "./ExtraSection1";
 import ExtraSection2 from "./ExtraSection2";
-import AnalyticsTeaser from "./AnalyticsTeaser"; // 👈 নতুন গ্রাফ সেকশন
+import AnalyticsTeaser from "./AnalyticsTeaser";
 
 const Home = () => {
   const axiosPublic = useAxiosPublic();
@@ -77,7 +76,7 @@ const Home = () => {
       <FeedbackCarousel />
       <ExtraSection1 />
 
-      {/* 🔥 এখানে গ্রাফ + CTA সেকশন */}
+      
       <AnalyticsTeaser />
 
       <ExtraSection2 />
