@@ -107,4 +107,3 @@ const AllLoans = () => {
 };
 
 export default AllLoans;
-//kkkkkkkkkkkk
