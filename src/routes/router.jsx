@@ -1,4 +1,3 @@
-// src/routes/router.jsx
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -15,7 +14,7 @@ import Contact from "../pages/Shared/Contact";
 import Home from "../pages/Home/Home";
 import AllLoans from "../pages/Loans/AllLoans";
 import LoanDetails from "../pages/Loans/LoanDetails";
-import LoanApplyForm from "../pages/Loans/LoanApplyForm"; // 👉 Apply Form
+import LoanApplyForm from "../pages/Loans/LoanApplyForm";
 
 // auth
 import Login from "../pages/Auth/Login";
@@ -39,7 +38,7 @@ import ManageLoans from "../pages/Dashboard/manager/ManageLoans";
 import PendingLoans from "../pages/Dashboard/manager/PendingLoans";
 import ApprovedLoans from "../pages/Dashboard/manager/ApprovedLoans";
 import ManagerProfile from "../pages/Dashboard/manager/ManagerProfile";
-import UpdateLoan from "../pages/Dashboard/manager/UpdateLoan"; // ✅ নতুন import
+import UpdateLoan from "../pages/Dashboard/manager/UpdateLoan";
 
 // guards
 import PrivateRoute from "../components/PrivateRoute";
@@ -64,7 +63,7 @@ const router = createBrowserRouter([
         ),
       },
 
-      // 👉 Loan Apply Form (এই রুটে ফর্ম দেখাবে)
+      // Loan apply form (protected)
       {
         path: "loans/:id/apply",
         element: (
@@ -174,7 +173,7 @@ const router = createBrowserRouter([
         ),
       },
 
-      // ✅ এই রুটটাই আগে ছিল না, এখন Edit এ গেলে এটা হিট করবে
+      // update loan (manager)
       {
         path: "update-loan/:id",
         element: (
