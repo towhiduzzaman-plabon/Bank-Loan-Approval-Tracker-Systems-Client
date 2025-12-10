@@ -1,4 +1,3 @@
-// src/pages/Dashboard/manager/AddLoan.jsx
 import React, { useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
