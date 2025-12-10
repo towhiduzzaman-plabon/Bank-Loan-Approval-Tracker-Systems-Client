@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import LoadingSpinner from "../../../components/LoadingSpinner";
-// src/pages/dashboard/borrower/MyLoans.jsx
+
 const MyLoans = () => {
   const axiosSecure = useAxiosSecure();
   const [applications, setApplications] = useState(null);
