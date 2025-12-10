@@ -56,7 +56,7 @@ const AllLoans = () => {
               key={loan._id}
               className="card bg-base-100 border rounded-2xl shadow-sm overflow-hidden flex flex-col"
             >
-              {/* image field যদি single "image" হয় তাহলে এখানে loan.image ব্যবহার করতে পারো */}
+              
               {loan.images?.[0] && (
                 <figure className="h-40 overflow-hidden">
                   <img

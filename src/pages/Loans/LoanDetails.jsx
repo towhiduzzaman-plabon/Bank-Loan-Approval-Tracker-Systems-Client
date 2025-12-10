@@ -1,4 +1,3 @@
-// src/pages/Loans/LoanDetails.jsx
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
@@ -147,7 +146,7 @@ const LoanDetails = () => {
 
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
-      {/* ---------- Loan Header / Summary ---------- */}
+      {/* ---------- Loan Header ---------- */}
       <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold">

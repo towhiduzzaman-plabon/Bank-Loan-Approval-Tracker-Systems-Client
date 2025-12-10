@@ -1,4 +1,3 @@
-// src/providers/AuthProvider.jsx
 import React, { createContext, useEffect, useState } from "react";
 import { app } from "../firebase.config";
 import {
@@ -33,7 +32,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password).then(
       async (result) => {
-        // যদি register এর সময় name/photo পাঠাও, তাহলে এখানে প্রোফাইল আপডেট হবে
+        // profile update
         if (name || photoURL) {
           await updateProfile(result.user, {
             displayName: name || result.user.displayName,
@@ -45,7 +44,7 @@ const AuthProvider = ({ children }) => {
     );
   };
 
-  // শুধু প্রোফাইল আপডেটের জন্য আলাদা ফাংশন
+  // update user profile
   const updateUserProfile = (name, photoURL) => {
     if (!auth.currentUser) return Promise.resolve();
     return updateProfile(auth.currentUser, {
@@ -113,9 +112,9 @@ const AuthProvider = ({ children }) => {
     loading,
     createUser,
     signIn,
-    signInWithGoogle,      // যদি useAuth থেকে এটা নাও
-    googleSignIn: signInWithGoogle, // আর কেউ googleSignIn নামে নিলে তাও কাজ করবে
-    updateUserProfile,     // Register.jsx এর জন্য
+    signInWithGoogle,  
+    googleSignIn: signInWithGoogle, 
+    updateUserProfile,     
     logOut,
   };
 

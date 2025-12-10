@@ -1,9 +1,8 @@
-// src/pages/Home/Hero.jsx
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// live, high-quality finance / banking images
+// Image URLs for the hero carousel
 const heroImages = [
   "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1400&q=80",
   "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1400&q=80",

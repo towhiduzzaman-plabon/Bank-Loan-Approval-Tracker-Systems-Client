@@ -1,4 +1,3 @@
-// src/pages/Home/HowItWorks.jsx
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiEdit3, FiCheckCircle, FiCreditCard } from "react-icons/fi";
@@ -21,7 +20,7 @@ const steps = [
   },
 ];
 
-const AUTOPLAY_DELAY = 4500; // ms – কত সময় পর পর step বদলাবে
+const AUTOPLAY_DELAY = 4500;
 
 const HowItWorks = () => {
   const [active, setActive] = useState(0);
